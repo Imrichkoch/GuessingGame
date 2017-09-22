@@ -46,6 +46,7 @@ public class GuessingDemo {
 				break; // ak je myslene cislo mensie ako uhadol pocitac, zaradi
 						// ho do max
 			case 'v':
+
 				min = arrayH[i];
 				break; // a naopak
 			case 'u':
@@ -79,14 +80,7 @@ public class GuessingDemo {
 
 		Random rand = new Random(); // trebalo samozrejme pouzit Random class
 
-		int randomNum = rand.nextInt((max - min) + 1) + min; // ak si program
-																// tipol prilis
-																// male cislo a
-																// dal som ze
-																// treba vacsie,
-																// furt hadal
-																// rovnake, tak
-																// som pridal 1
+		int randomNum = rand.nextInt((max - min)) + min;
 
 		return randomNum;
 	}
