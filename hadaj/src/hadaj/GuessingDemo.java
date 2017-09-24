@@ -22,7 +22,7 @@ public class GuessingDemo {
 
 			// blok zachytava spolu s metodou chybne vstupy
 			try {
-				arrayH[i] = randomNumber(min, max);
+				arrayH[i] = (max + min) / 2;
 				System.out.println("Vacsie alebo mensie?(m/v)\n" + arrayH[i] + "\nPocitac ma este pokusov: "
 						+ ((arrayH.length - i) - 1) + "\n");
 				count++;
@@ -42,12 +42,14 @@ public class GuessingDemo {
 
 			switch (a) {
 			case 'm':
-				max = arrayH[i];
+				max = (max + min) / 2;
+				min = min;
 				break; // ak je myslene cislo mensie ako uhadol pocitac, zaradi
 						// ho do max
 			case 'v':
 
-				min = arrayH[i];
+				max = max;
+				min = (max + min) / 2;
 				break; // a naopak
 			case 'u':
 				System.out.println("\nUhadol!!!\n");
