@@ -1,6 +1,5 @@
 package hadaj;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class GuessingDemo {
@@ -44,8 +43,7 @@ public class GuessingDemo {
 			case 'm':
 				max = (max + min) / 2;
 				min = min;
-				break; // ak je myslene cislo mensie ako uhadol pocitac, zaradi
-						// ho do max
+				break;
 			case 'v':
 
 				max = max;
@@ -75,16 +73,6 @@ public class GuessingDemo {
 		sc.close();
 		System.out.println("koniec");
 
-	}
-
-	// funkcia ktora generuje nahodne cisla na zaklade urceneho minima a maxima
-	public static int randomNumber(int min, int max) {
-
-		Random rand = new Random(); // trebalo samozrejme pouzit Random class
-
-		int randomNum = rand.nextInt((max - min)) + min;
-
-		return randomNum;
 	}
 
 	// metoda ktora porovnava znaky z klavesnice
